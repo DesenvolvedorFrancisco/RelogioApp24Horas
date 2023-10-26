@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">Hello</string>
+    <string name="battery_level">Battery Level</string>
+
+</resources>

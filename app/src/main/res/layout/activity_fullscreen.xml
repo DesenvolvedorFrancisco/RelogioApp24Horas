@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:theme="@style/ThemeOverlay.AppRelogioSerie24.FullscreenContainer"
+                tools:context=".FullscreenActivity">
+
+    <TextView
+        android:id="@+id/text_level_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:text="@string/battery_level"
+        android:textColor="#FFC107" />
+
+    <ImageView
+        android:id="@+id/image_view_preference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/ic_menu_preferences"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+        <TextClock
+            android:id="@+id/clock_hour_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opendisplay"
+            android:format12Hour="hh:mm:"
+            android:format24Hour="hh:mm:"
+            android:text="00:00"
+            android:textColor="#FF9800"
+            android:textSize="100sp" />
+
+        <TextClock
+            android:id="@+id/clock_hour_seconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/opendisplay"
+            android:format12Hour="ss"
+            android:format24Hour="ss"
+            android:text=":00"
+            android:textColor="#FF9800"
+            android:textSize="100sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#1EFF9800">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/battery_level"
+            android:padding="20dp"
+            android:textColor="#FFC107"
+            android:id="@+id/check_battery_level"/>
+
+        <ImageView
+            android:id="@+id/image_view_close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="20dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_margin="100sp"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HOUR   MINUTE   SECOND"
+            android:textSize="25sp"
+            android:textColor="#FF9800"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
